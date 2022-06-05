@@ -1,1 +1,1 @@
-https://SiarheiKazakevich.github.io/kids/haker
+https://SiarheiKazakevich.github.io/kids/haker/
