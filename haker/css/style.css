@@ -1,0 +1,253 @@
+body._lock {
+	overflow: hidden;
+}
+.wrapper {
+	min-height: 100%;
+}
+.page {
+	padding: 90px 0px 30px 0px;
+}
+.pagesection {
+	padding: 30px;
+	max-width: 1200px;
+	margin: 0px auto;
+}
+.pagesection1 {
+	background-color: rgb(194, 245, 10);
+}
+.pagesection2 {
+	background-color: rgb(15, 247, 34);
+}
+.pagesection3 {
+	background-color: rgb(87, 87, 235);
+}
+.pagetitle {
+	font-size: 40px;
+	margin: 0px 0px 20px 0px;
+}
+.pagetext {
+	font-size: 16px;
+	line-height: 150%;
+}
+.pagetext p {
+	margin: 0px 0px 20px 0px;
+}
+.pagesubtitle {
+	font-size: 30px;
+	margin: 0px 0px 20px 0px;
+}
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+	background-color: rgb(252, 14, 14);
+}
+.headercontainer {
+	max-width: 1200px;
+	margin: 0px auto;
+	display: flex;
+	padding: 0px 30px;
+	align-items: center;
+	justify-content: space-between;
+	min-height: 70px;
+}
+.headerlogo {
+	border-radius: 50%;
+	background-color: #fff;
+	position: relative;
+	z-index: 5;
+	width: 40px;
+	height: 40px;
+}
+.headermenu {
+}
+.menu {
+}
+.menuicon {
+	display: none;
+}
+.menubody {
+}
+.menulist {
+}
+.menulist > li {
+	position: relative;
+	margin: 0px 0px 0px 20px;
+}
+.menulink {
+	color: #fff;
+	font-size: 18px;
+}
+.menulink:hover {
+	text-decoration: underline;
+}
+.menusublist {
+	position: absolute;
+	top: 100%;
+	right: 0;
+	background-color: #000;
+	padding: 15px;
+	min-width: 200px;
+}
+.menusublist li {
+	margin: 0px 0px 10px 0px;
+}
+.menusublist li:last-child {
+	margin: 0;
+}
+.menusublink {
+	color: #fff;
+}
+.menusublink:hover {
+	text-decoration: underline;
+}
+.menuarrow {
+	display: none;
+}
+/*------------*/
+body._pc .menulist > li:hover .menusublist {
+	opacity: 1;
+	visibility: visible;
+	transform: translate(0px, 0px);
+	pointer-events: all;
+}
+body._touch .menulist > li {
+	display: flex;
+	align-items: center;
+}
+body._touch .menulink {
+	flex: 1 1 auto;
+}
+body._touch .menuarrow {
+	display: block;
+	width: 0;
+	height: 0;
+	margin: 0px 0px 0px 5px;
+	transition: transform 0.3s ease 0s;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 10px solid #fff;
+}
+body._touch .menulist > li._active .menusublist {
+	opacity: 1;
+	visibility: visible;
+	transform: translate(0px, 0px);
+	pointer-events: all;
+}
+body._touch .menulist > li._active .menuarrow {
+	transform: rotate(-188deg);
+}
+/*------------*/
+@media (min-width: 767px) {
+	.menulist {
+		display: flex;
+		align-items: center;
+	}
+	.menulist > li {
+		padding: 10px 0;
+	}
+	.menusublist {
+		transform: translate(0px, 10%);
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+		transition: all 0.3s ease 0s;
+	}
+}
+@media (max-width: 767px) {
+	.menuicon {
+		z-index: 5;
+		display: block;
+		position: relative;
+		width: 30px;
+		height: 18px;
+		cursor: pointer;
+	}
+	.menuicon span,
+	.menuicon::before,
+	.menuicon::after {
+		left: 0;
+		position: absolute;
+		height: 10%;
+		width: 100%;
+		transition: all 0.3s ease 0s;
+		background-color: #fff;
+	}
+	.menuicon::before,
+	.menuicon::after {
+		content: "";
+	}
+	.menuicon::before {
+		top: 0;
+	}
+	.menuicon::after {
+		bottom: 0;
+	}
+	.menuicon span {
+		top: 50%;
+		transform: scale(1) translate(0px, -50%);
+	}
+	.menuicon._active span {
+		transform: scale(0) translate(0px, -50%);
+	}
+	.menuicon._active::before {
+		top: 50%;
+		transform: rotate(-45deg) translate(0px, -50%);
+	}
+	.menuicon._active::after {
+		bottom: 50%;
+		transform: rotate(45deg) translate(0px, 50%);
+	}
+	.menubody {
+		position: fixed;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		/*transform: translate(-100%, 0px);*/
+		background-color: rgba(0, 0, 0, 0.9);
+		padding: 100px 30px 30px 30px;
+		transition: all 0.3s ease 0s;
+		overflow: auto;
+	}
+	.menubody._active {
+		/*transform:translate(0px, 0px);*/
+		left: 0;
+	}
+
+	.menubody::before {
+		contain: "";
+		position: fixed;
+		width: 100%;
+		top: 0;
+		left: 0;
+		height: 70px;
+		background-color: rgb(252, 14, 14);
+		z-index: 2;
+	}
+	.menulist > li {
+		margin: 0px 0px 30px 0px;
+	}
+	.menulist > li:last-child {
+		margin-bottom: 0;
+	}
+	.menulist > li._active .menusublist {
+		display: block;
+	}
+	.menulink {
+		font-size: 24px;
+	}
+	.menusublist {
+		position: relative;
+		background-color: #fff;
+		flex: 1 1 100%;
+		margin: 20px 0px 0px 0px;
+		display: none;
+	}
+	.menusublink {
+		font-size: 20px;
+		color: #000;
+	}
+}
