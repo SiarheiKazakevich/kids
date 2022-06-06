@@ -1,4 +1,5 @@
 /*определяет на каком устройстве открывается сайт*/
+"use strict"
 const isMobile = {
 	Android: function () {
 		return navigator.userAgent.match(/Android/i);
@@ -53,7 +54,7 @@ if (iconMenu) {
 }
 // прокрутка при клике
 
-const menuLinks = document.querySelectorAll('.menuLink[data-goto]');
+const menuLinks = document.querySelectorAll('.menulink[data-goto]');
 if (menuLinks.length > 0) {
 	menuLinks.forEach(menuLink => {
 		menuLink.addEventListener("click", onMenuLinkClick);
