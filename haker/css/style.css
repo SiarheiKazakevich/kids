@@ -54,12 +54,18 @@ body._lock {
 	min-height: 70px;
 }
 .headerlogo {
-	border-radius: 50%;
-	background-color: #fff;
+	border-radius: 30%;
+	/*background-color: #fff;*/
 	position: relative;
 	z-index: 5;
-	width: 40px;
-	height: 40px;
+	width: 65px;
+	height: 60px;
+}
+.textheader {
+	font-size: 40px;
+	font-style: normal;
+	font-weight: bold;
+	margin-left: 0%;
 }
 .headermenu {
 }
@@ -249,5 +255,19 @@ body._touch .menulist > li._active .menuarrow {
 	.menusublink {
 		font-size: 20px;
 		color: #000;
+	}
+	.headerlogo {
+		border-radius: 30%;
+		/*background-color: #fff;*/
+		position: relative;
+		z-index: 5;
+		width: 60px;
+		height: 60px;
+	}
+	.textheader {
+		font-size: 20px;
+		font-style: normal;
+		font-weight: bold;
+		margin-left: 0%;
 	}
 }

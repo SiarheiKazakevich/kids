@@ -21,8 +21,7 @@ const isMobile = {
 			isMobile.BlackBerry() ||
 			isMobile.IOS() ||
 			isMobile.Opera() ||
-			isMobile.Windows()
-		)
+			isMobile.Windows());
 	}
 };
 if (isMobile.any()) {
@@ -32,7 +31,7 @@ if (isMobile.any()) {
 	if (menuArrows.length > 0) {
 		for (let index = 0; index < menuArrows.length; index++) {
 			const menuArrow = menuArrows[index];
-			menuArrow.addEventListener("click", function (0) {
+			menuArrow.addEventListener("click", function (e) {
 				menuArrow.parentElement.classList.toggle('_active');
 			});
 
@@ -46,7 +45,7 @@ if (isMobile.any()) {
 const iconMenu = document.querySelector('.menuicon');
 const menuBody = document.querySelector('.menubody');
 if (iconMenu) {
-	iconMenu.addEventListener("click", function (0) {
+	iconMenu.addEventListener("click", function (e) {
 		document.body.classList.toggle('_lock');
 		iconMenu.classList.toggle('_active');
 		menuBody.classList.toggle('_active');
@@ -60,7 +59,7 @@ if (menuLinks.length > 0) {
 		menuLink.addEventListener("click", onMenuLinkClick);
 	});
 
-	function onMenuLinkClick(0) {
+	function onMenuLinkClick(e) {
 		const menuLink = e.target;
 		if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
 			const gotoBlock = document.querySelector(menuLink.dataset.goto);
