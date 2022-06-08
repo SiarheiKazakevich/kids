@@ -76,9 +76,13 @@ body._lock {
 }
 .fotochanel {
 	width: 40vw;
-	height: 45vh;
+	height: 50vh;
 	margin-right: 3vw;
 }
+.youtobe {
+	margin-right: 5px;
+}
+/*finish my change*/
 .pagesubtitle {
 	font-size: 30px;
 	margin: 0px 0px 20px 0px;
@@ -332,9 +336,12 @@ body._touch .menulist > li._active .menuarrow {
 	}
 	.fotochanel {
 		
-		width: 30vw;
-		height: 25vh;
+		width: 80vw;
+		height: 55vh;
 		margin-right: 1.5vw;
 		margin-bottom: 1.5vw;
 	}
+.phone2 {
+	background-color : rgb(243, 251, 6);
+}
 }
