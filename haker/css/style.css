@@ -112,6 +112,7 @@ body._lock {
 	width: 65px;
 	height: 60px;
 	margin-right: 15px;
+	transform: rotate(-8deg);
 }
 .textheader {
 	font-size: 40px;
