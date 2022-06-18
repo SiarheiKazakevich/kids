@@ -62,6 +62,9 @@ body._lock {
 	background-color: rgb(87, 87, 235);
 }
 /* мои изменения*/
+.pagesection4 {
+	background-color: rgb(249, 88, 7);
+}
 .pagetitle {
 	font-size: 40px;
 	margin: 0px 0px 20px 0px;
@@ -75,6 +78,11 @@ body._lock {
 	margin: 0px 0px 20px 0px;
 }
 .fotochanel {
+	width: 40vw;
+	height: 50vh;
+	margin-right: 3vw;
+}
+.videochanel {
 	width: 40vw;
 	height: 50vh;
 	margin-right: 3vw;
@@ -339,6 +347,12 @@ body._touch .menulist > li._active .menuarrow {
 		
 		width: 80vw;
 		height: 55vh;
+		margin-right: 1.5vw;
+		margin-bottom: 1.5vw;
+	}
+	.videochanel{		
+		width: 80vw;
+		height: 40vh;
 		margin-right: 1.5vw;
 		margin-bottom: 1.5vw;
 	}
